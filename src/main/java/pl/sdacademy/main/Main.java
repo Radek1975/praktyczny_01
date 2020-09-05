@@ -2,6 +2,6 @@ package pl.sdacademy.main;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Wooow !!");
+        System.out.println("Wooow !!!");
     }
 }
