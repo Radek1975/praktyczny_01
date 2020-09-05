@@ -29,19 +29,23 @@ public class Controller {
 
     private void handleTrapezeOption() {
         Trapeze trapeze = view.getTrapezeParameters();
-        double field = model.calculateTrapezeField(trapeze);
+        double field = model.calculateFigureField(trapeze);
         view.showTrapezeField(field);
     }
 
     private void handleRectangleOption() {
         Rectangle rectangle = view.getRectangleParameters();
-        double field = model.calculateRectangleField(rectangle);
+        double field = model.calculateFigureField(rectangle);
         view.showRectangleField(field);
     }
 
     private void handleCircleOption() {
         Circle circle = view.getCircleParameters();
-        double field = model.calculateCircleField(circle);
-        view.showCircleField(field);
+        if(circle.getRadius() <= 0) {
+            view.invalidRadiusValue();
+        } else {
+            double field = model.calculateFigureField(circle);
+            view.showCircleField(field);
+        }
     }
 }

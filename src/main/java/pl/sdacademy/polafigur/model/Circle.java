@@ -1,20 +1,16 @@
 package pl.sdacademy.polafigur.model;
 
-public class Circle {
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class Circle implements Figure {
     private double radius;
 
-    public Circle() {
-    }
-
-    public Circle(double radius) {
-        this.radius = radius;
-    }
-
-    public double getRadius() {
-        return radius;
-    }
-
-    public void setRadius(double radius) {
-        this.radius = radius;
+    public double field() {
+        return Math.PI * radius * radius;
     }
 }

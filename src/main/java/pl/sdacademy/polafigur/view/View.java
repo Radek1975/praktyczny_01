@@ -24,11 +24,13 @@ public class View {
 
 
     public Circle getCircleParameters() {
-        System.out.println("Podaj promień koła: ");
         Scanner scanner = new Scanner(System.in);
-        double r = scanner.nextDouble();
+        Circle circle = new Circle();
 
-        return new Circle(r);
+        System.out.println("Podaj promień koła: ");
+        circle.setRadius(scanner.nextDouble());
+
+        return circle;
     }
 
     public Rectangle getRectangleParameters() {
@@ -70,5 +72,9 @@ public class View {
 
     public void showTrapezeField(double field) {
         System.out.println("Pole trapezu wynosi: " + field);
+    }
+
+    public void invalidRadiusValue() {
+        System.out.println("Niepoprawa wartość promienia koła");
     }
 }
