@@ -1,6 +1,5 @@
 package pl.sdacademy.polafigur.view;
 
-import org.w3c.dom.css.Rect;
 import pl.sdacademy.polafigur.model.Circle;
 import pl.sdacademy.polafigur.model.Rectangle;
 import pl.sdacademy.polafigur.model.Trapeze;

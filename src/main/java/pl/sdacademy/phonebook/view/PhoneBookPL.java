@@ -8,12 +8,12 @@ import java.util.Scanner;
 public class PhoneBookPL implements PhoneBookView {
 
     public int showMenuAndGetOption() {
-        System.out.println("Wybierz jedna z opcji");
-        System.out.println("[0] Wyjdź z programu");
-        System.out.println("[1] Wyswietl wszystkie kontakty");
-        System.out.println("[2] Dodaj nowy kontakt");
-        System.out.println("[3] Usuń kontakt z listy");
-        System.out.println("[4] Zmień język");
+        System.out.println("\nWybierz jedna z opcji:");
+        System.out.println("0 - Wyjdź z programu");
+        System.out.println("1 - Wyswietl wszystkie kontakty");
+        System.out.println("2 - Dodaj nowy kontakt");
+        System.out.println("3 - Usuń kontakt z listy");
+        System.out.println("4 - Zmień język");
 
         Scanner scanner = new Scanner(System.in);
         int option = scanner.nextInt();
@@ -25,24 +25,23 @@ public class PhoneBookPL implements PhoneBookView {
         Scanner scanner = new Scanner(System.in);
         Contact contact = new Contact();
 
-        System.out.println("Podaj imię: ");
+        System.out.print("Podaj imię: ");
         contact.setName(scanner.nextLine());
 
-        System.out.println("Podaj nazwisko");
+        System.out.print("Podaj nazwisko: ");
         contact.setLastName(scanner.nextLine());
 
-        System.out.println("Podaj numer telefonu");
+        System.out.print("Podaj numer telefonu: ");
         contact.setPhone(scanner.nextLine());
 
         return contact;
     }
 
     public void showAllContacts(List<Contact> contactList) {
-        System.out.println("Lista kontaktów");
-        System.out.println("------------------------");
+        System.out.println("\nLista kontaktów:");
         for(int i = 0; i < contactList.size(); i++) {
             Contact contact = contactList.get(i);
-            System.out.println(i + ". " + contact.getName() + " " + contact.getLastName() + " " + contact.getPhone());
+            System.out.println((i+1) + ". " + contact.getName() + " " + contact.getLastName() + ", tel. " + contact.getPhone());
         }
     }
 

@@ -18,16 +18,25 @@ public class PhoneBookController {
     }
 
     public void terminator() {
-        int option = -1;
-        while (option != 0) {
+
+        int option;
+        do {
             option = view.showMenuAndGetOption();
             switch (option) {
-                case 1: handleShowAllAction(); break;
-                case 2: handleAddContactAction(); break;
-                case 3: handleDeleteContactAction(); break;
-                case 4: handleLanguageChangeAction(); break;
+                case 1:
+                    handleShowAllAction();
+                    break;
+                case 2:
+                    handleAddContactAction();
+                    break;
+                case 3:
+                    handleDeleteContactAction();
+                    break;
+                case 4:
+                    handleLanguageChangeAction();
+                    break;
             }
-        }
+        } while (option != 0);
     }
 
     private void handleLanguageChangeAction() {
