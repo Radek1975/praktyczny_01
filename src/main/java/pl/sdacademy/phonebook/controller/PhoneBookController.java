@@ -17,7 +17,7 @@ public class PhoneBookController {
         view = new PhoneBookPL();
     }
 
-    public void terminator() {
+    public void start() {
 
         int option;
         do {
