@@ -8,11 +8,11 @@ import java.util.Scanner;
 public class PhoneBookEng implements PhoneBookView {
     public int showMenuAndGetOption() {
         System.out.println("Select option");
-        System.out.println("[0] Exit program");
-        System.out.println("[1] Show all contacts");
-        System.out.println("[2] Add new contact");
-        System.out.println("[3] Delete contact from list");
-        System.out.println("[4] Change language");
+        System.out.println("1 - Show all contacts");
+        System.out.println("2 - Add new contact");
+        System.out.println("3 - Delete contact from list");
+        System.out.println("4 - Change language");
+        System.out.println("0 - Exit program");
 
         Scanner scanner = new Scanner(System.in);
         int option = scanner.nextInt();
@@ -56,8 +56,8 @@ public class PhoneBookEng implements PhoneBookView {
     public Integer showLanguageSelectMenu() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Select your language");
-        System.out.println("0 - polish");
-        System.out.println("1 - english");
+        System.out.println("1 - Polski");
+        System.out.println("2 - English");
         int selectedOption = scanner.nextInt();
         return selectedOption;
     }

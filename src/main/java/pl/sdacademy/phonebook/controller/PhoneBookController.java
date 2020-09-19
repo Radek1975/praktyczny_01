@@ -41,9 +41,9 @@ public class PhoneBookController {
 
     private void handleLanguageChangeAction() {
         int option = view.showLanguageSelectMenu();
-        if(option == 0) {
+        if (option == 1) {
             view = new PhoneBookPL();
-        } else if(option == 1) {
+        } else if (option == 2) {
             view = new PhoneBookEng();
         }
     }
