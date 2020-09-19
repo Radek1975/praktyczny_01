@@ -17,7 +17,7 @@ public class PhoneBookPL implements PhoneBookView {
 
         Scanner scanner = new Scanner(System.in);
         int option = scanner.nextInt();
-
+        System.out.println("test");
         return option;
     }
 
